@@ -221,6 +221,9 @@ select:focus{
     border:1px solid #EFF0F6;
     border-radius:18px;
     background-color: #fff;
+    @media screen and (min-width:768px){
+        max-width: 337.5px;
+    }
 }
 
 
@@ -284,7 +287,7 @@ select:focus{
 }
 
 .dashboard-card-inner .card{
-    max-width: calc(100%/3 - 7px);
+    max-width: calc(100%/2 - 7px);
     min-width: 134px;
     width:100%;
     border-radius:18px;
@@ -299,6 +302,7 @@ select:focus{
     }
     @media screen and (min-width:768px){
         min-width: 158px;
+        max-width: calc(100%/3 - 7px);
     }
     @media screen and (min-width:1260px){
         max-width: 158px;
@@ -375,11 +379,14 @@ select:focus{
 
 
 .weakest-topic-sec{
-    padding:24px;
+    padding:16px;
     background-color: #fff;
     border:1px solid #EFF0F6;
     border-radius: 18px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    @media screen and (min-width:768px){
+        padding:24px;
+    }
 }
 
 .weakest-topic-sec h2{

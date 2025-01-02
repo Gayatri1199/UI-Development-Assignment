@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tesla</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="tesla-container">
+      <div class="tesla-container-inner">
+        <!-- SideBar Starts here -->
+        <div class="side-bar" id="sideBar">
+          <div class="logo">
+            <img src="./assets/tesla.svg" />
+          </div>
+          <div class="navs">
+            <a href="javascript:void(0)" class="active">
+              <span class="icon">
+                <img src="./assets/reports-nav.svg" alt="Nav Icons"/>
+              </span>
+              <span class="nav">Reports</span>
+            </a>
+            <a href="javascript:void(0)">
+              <span class="icon"><img src="./assets/Quiz.svg" alt="Nav Icons"/></span>
+              <span class="nav">Library</span>
+            </a>
+            <a href="javascript:void(0)">
+              <span class="icon"><img src="./assets/People.svg" alt="Nav Icons"/></span>
+              <span class="nav">People</span>
+            </a>
+            <a href="javascript:void(0)">
+              <span class="icon"><img src="./assets/Assignments.svg" alt="Nav Icons"/></span>
+              <span class="nav">Activities</span>
+            </a>
+
+            <div class="support-sec">
+              <h2>Support</h2>
+              <a href="javascript:void(0)">
+                <span class="icon"><img src="./assets/Bulb.svg" alt="Nav Icons"/></span>
+                <span class="nav">Get Started</span>
+              </a>
+              <a href="javascript:void(0)">
+                <span class="icon"><img src="./assets/Settings.svg" alt="Nav Icons"/></span>
+                <span class="nav">Settings</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- SideBar Ends here -->
+        <!-- Main Stars here -->
+        <div class="main-content" id="maincontentHolder">
+          <!-- Header Stars here -->
+          <div class="header-mob">
+            <span class="menu-icon" id="menuBtn"><img src="./assets/icons-menu.svg" alt="menu-icon"/></span>
+            <div class="logo">
+              <img src="./assets/tesla.svg" />
+            </div>
+          </div>
+          <div class="header">
+            <h1>Reports</h1>
+            <div class="download-cta">
+              <a href="javascript:void(0)" onclick="captureAndDownload()">
+                <span class="icon"><img src="./assets/Download.svg" alt="Download"/></span>
+                <span class="name">Download</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Header Ends here -->
+           <!-- Content Starts here -->
+          <div class="content-section">
+            <!-- Filters Starts here -->
+            <div class="filters">
+              <div class="filter">
+                <span class="label">Timeframe:</span>
+                <select name="cars" id="cars">
+                  <option value="volvo">All-time</option>
+                  <option value="saab">Dummy1</option>
+                  <option value="mercedes">Dummy2</option>
+                  <option value="audi">Dummy3</option>
+                </select>
+              </div>
+              <div class="filter">
+                <span class="label">People:</span>
+                <select name="cars" id="cars">
+                  <option value="volvo">All</option>
+                  <option value="saab">Dummy1</option>
+                  <option value="mercedes">Dummy2</option>
+                  <option value="audi">Dummy3</option>
+                </select>
+              </div>
+              <div class="filter">
+                <span class="label">Topic:</span>
+                <select name="cars" id="cars">
+                  <option value="volvo">All</option>
+                  <option value="saab">Dummy1</option>
+                  <option value="mercedes">Dummy2</option>
+                  <option value="audi">Dummy3</option>
+                </select>
+              </div>
+            </div>
+            <!-- Filter Ends here -->
+
+            <div class="dashboard">
+              <div class="dashboard-card card-sec">
+                <div class="dashboard-card-inner">
+                  <div class="card">
+                    <h2>Active Users</h2>
+                    <p>
+                      <span class="exact">27</span
+                      ><span class="outof">/80</span>
+                    </p>
+                  </div>
+                  <div class="card">
+                    <h2>Questions Answered</h2>
+                    <p>
+                      3,298
+                    </p>
+                  </div>
+                  <div class="card">
+                    <h2>Av. Session Length</h2>
+                    <p>
+                      2m 34s
+                    </p>
+                  </div>
+                  <div class="card">
+                    <h2>Starting Knowledge <img src="./assets/Icon-info-circle-line.svg" alt="imformation"/></h2>
+                    <p>
+                      64%
+                    </p>
+                    <img src="./assets/graph.svg" alt="Graph"/>
+
+                  </div>
+                  <div class="card">
+                    <h2>Current Knowledge</h2>
+                    <p>
+                      86%
+                    </p>
+                    <img src="./assets/graph.svg" alt="Graph"/>
+                  </div>
+                  <div class="card">
+                    <h2>Knowledge Gain</h2>
+                    <p>
+                      +34%
+                    </p>
+                    <img src="./assets/graph.svg" alt="Graph"/>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-card">
+                <div class="activity-sec">
+                  <div class="upper-sec">
+                    <h2>Activity</h2>
+                    <select name="cars" id="cars">
+                      <option value="volvo">Month</option>
+                      <option value="saab">Dummy1</option>
+                      <option value="mercedes">Dummy2</option>
+                      <option value="audi">Dummy3</option>
+                    </select>
+                  </div>
+                  <div class="chart">
+                    <canvas id="myChart" height="130"></canvas>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="dashboard">
+              <div class="dashboard-card card-sec ">
+                <div class="weakest-topic-sec">
+                <h2>Weakest Topics </h2>
+                <div class="food-bar">
+                  <div class="image">
+                    <img src="./assets/food-quality.svg" alt="Food Safety"/>
+                  </div>
+                  <div class="content">
+                    <h3>Food Safety</h3>
+                    <div class="bar-sec">
+                      <div class="bar">
+                        <div class="skill-main">
+                          <div class="skill-wrrap">
+                           
+                            <div class="skill-bar">
+                              <div class="skill-per" per="74"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="amount">
+                        <span>74% </span> <span class="status">Correct</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="food-bar">
+                  <div class="image">
+                    <img src="./assets/compliance-basics-procedures.svg" alt="Food Safety"/>
+                  </div>
+                  <div class="content">
+                    <h3>Compliance Basics Procedures </h3>
+                    <div class="bar-sec">
+                      <div class="bar">
+                        <div class="skill-main">
+                          <div class="skill-wrrap">
+                           
+                            <div class="skill-bar">
+                              <div class="skill-per" per="52"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="amount">
+                        <span>52% </span> <span class="status">Correct</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="food-bar">
+                  <div class="image">
+                    <img src="./assets/company-networking.svg" alt="Food Safety"/>
+                  </div>
+                  <div class="content">
+                    <h3>Company Networking</h3>
+                    <div class="bar-sec">
+                      <div class="bar">
+                        <div class="skill-main">
+                          <div class="skill-wrrap">
+                           
+                            <div class="skill-bar">
+                              <div class="skill-per" per="36"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="amount">
+                        <span>36% </span> <span class="status">Correct</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="dashboard-card  ">
+                <div class="weakest-topic-sec strongest-topics-sec">
+                <h2>Strongest Topics </h2>
+                <div class="food-bar">
+                  <div class="image">
+                    <img src="./assets/covid-protocols.svg" alt="Food Safety"/>
+                  </div>
+                  <div class="content">
+                    <h3>Covid Protocols</h3>
+                    <div class="bar-sec">
+                      <div class="bar">
+                        <div class="skill-main">
+                          <div class="skill-wrrap">
+                           
+                            <div class="skill-bar">
+                              <div class="skill-per" per="95"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="amount">
+                        <span>95% </span> <span class="status">Correct</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="food-bar">
+                  <div class="image">
+                    <img src="./assets/cyber-security.svg" alt="Food Safety"/>
+                  </div>
+                  <div class="content">
+                    <h3>Cyber Security Basics </h3>
+                    <div class="bar-sec">
+                      <div class="bar">
+                        <div class="skill-main">
+                          <div class="skill-wrrap">
+                           
+                            <div class="skill-bar">
+                              <div class="skill-per" per="92"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="amount">
+                        <span>92% </span> <span class="status">Correct</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="food-bar">
+                  <div class="image">
+                    <img src="./assets/social-media-policies.svg" alt="Food Safety"/>
+                  </div>
+                  <div class="content">
+                    <h3>Social Media Policiess </h3>
+                    <div class="bar-sec">
+                      <div class="bar">
+                        <div class="skill-main">
+                          <div class="skill-wrrap">
+                           
+                            <div class="skill-bar">
+                              <div class="skill-per" per="89"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="amount">
+                        <span>89% </span> <span class="status">Correct</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="dashboard">
+              <div class="dashboard-card card-sec ">
+                <div class="weakest-topic-sec leader-board">
+                <h2>User Leaderboard </h2>
+                <div class="food-bar">
+                  <div class="image">
+                    <img src="./assets/avtar-1.svg" alt="Food Safety"/>
+                  </div>
+                  <div class="content-wrapper">
+                    <div class="content-inner">
+                      <h3>Jesse Thomas</h3>
+                      <p>637 Points - 98% Correct</p>
+                    </div>
+                    <div class="level">
+                      <span>1</span>
+                      <span class="icon"><img src="./assets/green-arrow.svg" alt="Status"/></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="food-bar">
+                  <div class="image">
+                    <img src="./assets/avtar-2.svg" alt="Food Safety"/>
+                  </div>
+                  <div class="content-wrapper">
+                    <div class="content-inner">
+                      <h3>Thisal Mathiyazhagan</h3>
+                      <p>637 Points - 89% Correct </p>
+                    </div>
+                    <div class="level">
+                      <span>2</span>
+                      <span class="icon"><img src="./assets/red-arrow.svg" alt="Status"/></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="food-bar">
+                  <div class="image">
+                    <img src="./assets/avtar-1.svg" alt="Food Safety"/>
+                  </div>
+                  <div class="content-wrapper">
+                    <div class="content-inner">
+                      <h3>Jesse Thomas</h3>
+                      <p>637 Points - 98% Correct</p>
+                    </div>
+                    <div class="level">
+                      <span>1</span>
+                      <span class="icon"><img src="./assets/green-arrow.svg" alt="Status"/></span>
+                    </div>
+                  </div>
+                </div>
+
+                
+              </div>
+              </div>
+              <div class="dashboard-card ">
+                <div class="weakest-topic-sec">
+                <h2>Groups Leaderboard </h2>
+                <div class="food-bar">
+                  
+                  <div class="content-wrapper">
+                    <div class="content-inner">
+                      <h3>Houston Facility</h3>
+                      <p>52 Points / User - 97% Correct</p>
+                    </div>
+                    <div class="level">
+                      <span>1</span>
+                      <span class="icon"><img src="./assets/green-arrow.svg" alt="Status"/></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="food-bar">
+                  
+                  <div class="content-wrapper">
+                    <div class="content-inner">
+                      <h3>Test Group</h3>
+                      <p>52 Points / User - 95% Correct</p>
+                    </div>
+                    <div class="level">
+                      <span>2</span>
+                      <span class="icon"><img src="./assets/red-arrow.svg" alt="Status"/></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="food-bar">
+                 
+                  <div class="content-wrapper">
+                    <div class="content-inner">
+                      <h3>Houston Facility</h3>
+                      <p>52 Points / User - 97% Correct</p>
+                    </div>
+                    <div class="level">
+                      <span>1</span>
+                      <span class="icon"><img src="./assets/red-arrow.svg" alt="Status"/></span>
+                    </div>
+                  </div>
+                </div>
+
+                
+              </div>
+              </div>
+             
+            </div>
+
+            </div>
+            <!-- Content Ends here -->
+          </div>
+          <!-- Main Ends here -->
+        </div>
+      </div>
+    </div>
+    <!-- <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"
+    ></script> -->
+    /
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+    <script src="./main.js"></script>
+  </body>
+</html>
